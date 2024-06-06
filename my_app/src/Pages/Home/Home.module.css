@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    font-family: "Lora";
+}
+.imgContainer{
+    height: 100vh;
+    width: 40%;
+    position: relative;
+}
+.imgContainer img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainContent{
+    width: 60%;
+    padding: 100px 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #FCFAFA;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.mainHeader{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #462412;
+    margin-bottom: 0;
+}
+.chooseLanguage{
+    display: flex;
+
+}
+.chooseLanguage h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #A02323;
+    margin-top: 0;
+}
+.selector{
+    text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    width: 100%;
+}
+.waveBorder{
+    background-color: #D7C6BC;
+    height: 33px;
+    --mask:
+    radial-gradient(11.74px at 50% calc(100% + 6.4px),#0000 calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) calc(50% - 16px) calc(50% - 5.5px + .5px)/32px 11px repeat-x,
+    radial-gradient(11.74px at 50% -6.4px,#0000 calc(99% - 3px),#000 calc(101% - 3px) 99%,#0000 101%) 50% calc(50% + 5.5px)/32px 11px repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+.subContainerOne, .subContainerTwo{
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.subContainerTwo{
+    align-self: end;
+}
+.profilePicture{
+    margin: 0 20px;
+    width: 60px;
+    height: 60px;
+}
+.bio{
+    width: 200px;
+}
+.bio h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #462412;
+    margin: 0;
+}
+.bio p{
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 1rem;
+    color: #462412a9;
+}
+
+.flagContainer {
+    position: relative;
+    width: fit-content; /* Adjust this value as needed */
+    height: 35px; /* Adjust this value as needed */
+  }
+  
+  .flagContainer img {
+    position: absolute;
+    width: 35px; /* Adjust this value as needed */
+    height: 35px; /* Adjust this value as needed */
+    border-radius: 50%; /* To make the image circular */
+  }
+
+.profilePicture{
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.languages div img, .profilePicture img{
+    height: 100%;
+    
+}
+.detailBtn button{
+    background-color: #A02323;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    margin-left: 10px;
+}
