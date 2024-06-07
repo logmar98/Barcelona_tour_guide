@@ -163,7 +163,12 @@
     font-size: 3.5em;
     margin: 0;
 }
-
+.descriptionDetail{
+    text-align: nowrap;
+    padding: 0 10px;
+    max-width: 300px;
+    text-align: center;
+}
 @media screen and (max-width: 768px){
     .container{
         flex-direction: column;
@@ -181,6 +186,5 @@
         font-size: 2rem;
         margin-top: 5px;
     }
-
 
 }

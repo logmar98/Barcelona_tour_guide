@@ -77,7 +77,7 @@ function Speaker_card(props) {
                                 </React.Fragment>
                             ))}
                         </div>
-                        <p>{props.description}</p>
+                        <p className={Styles.descriptionDetail}>{props.description}</p>
                         <div className={Styles.detailBtns}>
                             <div className={Styles.inDetailBtn}>
                                 <button onClick={() => openLink(props.website)}>Visit website</button>
