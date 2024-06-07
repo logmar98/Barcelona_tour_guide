@@ -108,3 +108,41 @@
     margin-left: 10px;
 }
 
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        overflow: auto;
+        position: relative;
+    }
+    .imgContainer{
+        width: 100%;
+        height: 40vh;
+    }
+    
+    .mainContent{
+        width: auto;
+        height: 60vh;
+        padding: 50px 10% 0 10%;
+        overflow: visible;
+    }
+    .mainHeader{
+        font-size: 1.5em;
+        width: 300px;
+    }
+    .chooseLanguage h1{
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+    .languageList{
+        width: 60%;
+        left: 0;
+    }
+    .languageListSelect img{
+        width: 30px;
+        height: 30px;
+    }
+    .languageListSelect h3{
+        font-size: 1.2rem;
+    }
+    
+}

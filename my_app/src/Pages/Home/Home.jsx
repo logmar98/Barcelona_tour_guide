@@ -11,6 +11,7 @@ function Home() {
     const [data, setData] = useState([]);
     const [allData, setAllData] = useState([]);
     const [allLanguages, setAllLanguages] = useState([]);
+    const [language, setLanguage] = useState("your language")
 
     useEffect(() => {
       const fetchData = async () => {
@@ -40,14 +41,18 @@ function Home() {
 
       }, [data]); 
 
+    
     const selectThisLanguage = (e) => {
         if (e.target.innerText === 'any language') {
-            setData(allData)
             setselectLanguage(false)
-            return
+            setData(allData)
+            setLanguage('your language')
         }
-        setData(data.filter(speaker => speaker.languages.includes(e.target.innerText)))
-        setselectLanguage(false)
+        else{
+            setData(allData.filter(speaker => speaker.languages.includes(e.target.innerText)))
+            setLanguage(e.target.innerText)
+            setselectLanguage(false)
+        }
     }
 
     return (
@@ -60,7 +65,7 @@ function Home() {
                     <h1 className={Styles.mainHeader}>Hire licensed & private Barcelona tour guide</h1>
                     <div className={Styles.chooseLanguage}>
                         <h1>who speaks</h1>
-                        <h1 className={Styles.selector} onClick={() => setselectLanguage(!selectLanguage)}>your language<small>▼</small></h1>
+                        <h1 className={Styles.selector} onClick={() => setselectLanguage(!selectLanguage)}>{language}<small>▼</small></h1>
                     </div>
                     <div className={Styles.languageContainer}>
                         {selectLanguage && (

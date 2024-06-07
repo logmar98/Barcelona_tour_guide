@@ -16,7 +16,7 @@
 }
 .subContainerOne, .subContainerTwo{
     display: flex;
-    align-items: center;
+    align-items: start;
     width: auto;
 }
 
@@ -76,12 +76,21 @@
 }
 .detailBtn button{
     background-color: #A02323;
+    border: 1px solid #A02323;
     color: #fff;
     padding: 8px 16px;
     font-size: 1rem;
-    border: none;
     border-radius: 50px;
     margin-left: 10px;
+}
+.detailBtn button:hover{
+    background-color: #fff;
+    color: #A02323;
+}
+.detailBtn button:active{
+    background-color: #a02323d7;
+    color: #fff;
+    scale: 0.9;
 }
 
 .details{
@@ -126,6 +135,16 @@
     border: solid 1px #A02323;
     border-radius: 50px;
 }
+.inDetailBtn button:hover{
+    background-color: #fff;
+    color: #A02323;
+}
+.inDetailBtn button:active{
+    background-color: #a02323d7;
+    scale: 0.9;
+    color: #fff;
+}
+
 .detailsFlag {
     display: flex;
     justify-content: center;
@@ -139,4 +158,29 @@
     width: 35px; /* Adjust this value as needed */
     height: 35px; /* Adjust this value as needed */
     border-radius: 50%; /* To make the image circular */
+}
+.nameDetail{
+    font-size: 3.5em;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    
+    .subContainerOne{
+        align-items: start;
+    }
+    .detailsContainer{
+        min-width: 300px;
+        min-height: 60vh;
+        padding: 0;
+    }
+    .nameDetail{
+        font-size: 2rem;
+        margin-top: 5px;
+    }
+
+
 }

@@ -32,7 +32,7 @@ function Speaker_card(props) {
                     </div>
                     <div className={Styles.bio}>
                         <h2>{props.name}</h2>
-                        <p>{props.descreption}</p>
+                        <p>{props.description}</p>
                     </div>
                 </div>
                 <div className={Styles.subContainerTwo}>
@@ -63,18 +63,18 @@ function Speaker_card(props) {
                         <div style={{height: `150px`,width: `150px`}} className={Styles.profilePicture}>
                             <img src={props.picture} alt="" />
                         </div>
-                        <h1 style={{fontSize: `3.5em`,margin: `0`}}>{props.name}</h1>
-                        <h3>Registration #: {props.id}</h3>
+                        <h1 className={Styles.nameDetail} >{props.name}</h1>
+                        <h3 style={{opacity: `0.7`}}>Registration #: {props.id}</h3>
                         <div className={Styles.detailsFlag}>
                             {props.languages.map((url, index) => (
-                                <>
+                                <React.Fragment key={`details-flag-${index}`}>
                                     <img
                                     key={index}
                                     src={'https://unpkg.com/language-icons/icons/' + url +'.svg'}
                                     alt={`Flag ${index + 1}`}
                                     />
                                     <h3>{url}</h3>
-                                </>
+                                </React.Fragment>
                             ))}
                         </div>
                         <p>{props.description}</p>
