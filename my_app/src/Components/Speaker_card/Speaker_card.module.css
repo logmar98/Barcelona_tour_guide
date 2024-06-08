@@ -72,6 +72,8 @@
 }
 .languages div img, .profilePicture img{
     height: 100%;
+    width: 100%;
+    object-fit: cover;
     
 }
 .detailBtn button{
@@ -109,7 +111,7 @@
     background-color: #FCFAFA;
     width: auto;
     min-width: 500px;
-    height: 80vh;
+    min-height: 80vh;
     padding: 20px 40px;
     display: flex;
     flex-direction: column;
@@ -151,7 +153,6 @@
     align-items: center;
     gap: 10px;
     width: fit-content; /* Adjust this value as needed */
-    height: 35px; /* Adjust this value as needed */
 }
 
 .detailsFlag img {
@@ -172,6 +173,7 @@
 @media screen and (max-width: 768px){
     .container{
         flex-direction: column;
+        gap: 5px;
     }
     
     .subContainerOne{
@@ -180,11 +182,14 @@
     .detailsContainer{
         min-width: 300px;
         min-height: 60vh;
-        padding: 0;
+        padding: 10px 0;
     }
     .nameDetail{
         font-size: 2rem;
         margin-top: 5px;
     }
-
+    .detailsFlag{
+        flex-wrap: wrap;
+        max-width: 300px;
+    }
 }
